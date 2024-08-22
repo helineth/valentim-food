@@ -24,7 +24,7 @@
           />
 
           <div class="row no-wrap items-center">
-            <div class="col text-h6 ellipsis">{{ item?.name }}</div>
+            <div class="col text-h6 ellipsis">{{ $route.params.name }}</div>
             <div
               class="col-auto text-grey text-caption q-pt-md row no-wrap items-center"
             >
@@ -46,7 +46,7 @@
         <q-card-actions>
           <q-btn flat round icon="event" />
 
-          <q-btn flat color="primary" to="/detail"> Reservar </q-btn>
+          <q-btn flat color="primary"  :to="`/detail/${item?.name}`"> Reservar </q-btn>
         </q-card-actions>
       </q-card>
     </div>
